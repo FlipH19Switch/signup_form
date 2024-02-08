@@ -3,6 +3,10 @@
     src: url('fonts/Norse-Bold.otf') format("opentype");
 }
 
+body {
+    margin: 0px;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -62,7 +66,7 @@
     color: white;
 }
 
-.background-credit > a, a:hover, a:visited, a:active {
+.background-credit > a {
     color: inherit;
 }
 
@@ -74,30 +78,48 @@ form {
 }
 
 .top-form-box {
-    border: 2px solid black;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgb(248, 248, 248);
 }
 
 .middle-form-box {
-    min-height: 30vh;
+    flex: 0 0 345px;
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    box-shadow: 0px 5px 5px lightgray;
+    z-index: 1;
 }
 
 .bottom-form-box {
-    border: 2px solid black;
+    background-color: rgb(248, 248, 248);
+    flex: 1 1 0;
 }
 
-.middle-form-title, .input-format {
+.middle-form-title, .input-format, .top-form-text {
     margin-left: 3vw;
     margin-right: 3vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
 }
 
-.middle-form-title {
+.top-form-text {
+    margin-right: 11vw;
+}
+
+.top-form-text > p {
+    margin: 0px;
+}
+
+.top-form-bottom-box {
+    flex: 1;
+    max-height: 5vh;
+}
+
+.middle-form-title, .top-form-text {
     font-size: 200%;
-    
 }
 
 .form-row-container {
@@ -108,4 +130,42 @@ form {
 
 .input-format > label {
     display: block;
+}
+
+input {
+    height: 40px;
+    font-size: 125%;
+    border-radius: 5px;
+    text-indent: 10px;
+    border: 1px solid #E5E7EB;
+}
+
+button {
+    height: 50px;
+    width: 225px;
+    margin-left: 3vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 125%;
+    font-weight: bold;
+    color: white;
+    background-color: #596D48;
+    border-radius: 8px;
+    border: none;
+}
+
+.login-text {
+    margin-left: 3vw;
+    font-size: 125%;
+}
+
+.login-text > a {
+    color: #596D48;
+    text-decoration: none;
+}
+
+:focus {
+    outline: 0;
+    border-color: blue;
+    box-shadow: 3px 3px 3px lightgray;
 }
