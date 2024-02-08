@@ -3,6 +3,12 @@
     src: url('fonts/Norse-Bold.otf') format("opentype");
 }
 
+:focus {
+    outline: 0;
+    border-color: blue;
+    box-shadow: 3px 3px 3px lightgray;
+}
+
 body {
     margin: 0px;
 }
@@ -164,8 +170,12 @@ button {
     text-decoration: none;
 }
 
-:focus {
+.error {
     outline: 0;
-    border-color: blue;
-    box-shadow: 3px 3px 3px lightgray;
+    border-color: red;
+}
+
+#password-mismatch {
+    color: red;
+    margin: 0;
 }

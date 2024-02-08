@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
     <title>Sign-Up Form</title>
 </head>
 <body>
@@ -45,7 +46,8 @@
                             </div>
                             <div class="input-format">
                                 <label for="user_password">PASSWORD</label>
-                                <input type="password" id="user_password" name="password" class="error" required>
+                                <input type="password" id="user_password" name="password" class="error" onkeyup="checkPassMatch()" required>
+                                <p id="password-mismatch">* Passwords do not match</p>
                             </div>
                         </div>
                         <div class="form-row-right">
@@ -59,7 +61,7 @@
                             </div>
                             <div class="input-format">
                                 <label for="user_password_confirmation">CONFIRM PASSWORD</label>
-                                <input type="password" id="user_password_confirmation" name="password_confirmation" class="error" required>
+                                <input type="password" id="user_password_confirmation" name="password_confirmation" class="error" onkeyup="checkPassMatch()" required>
                             </div>
                         </div>
                     </div>
